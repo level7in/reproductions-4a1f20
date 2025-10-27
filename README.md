@@ -1,6 +1,9 @@
 # Vue 2 Deep Selectors issue with LightningCSS
 
-This project demonstrates the issue and solution for LightningCSS warnings with Vue 2.7 deep selector syntax (:deep(), `::v-deep`, `>>>`, `/deep/`) when using LightningCSS transformer.
+This project demonstrates the issue and solution for LightningCSS warnings with Vue 2.7 deep selector syntax (`:deep()`, `::v-deep`, `>>>`, `/deep/`) when using LightningCSS transformer.
+
+* [Issue](https://github.com/vitejs/vite-plugin-vue2/issues/114)
+* [PR](https://github.com/vitejs/vite-plugin-vue2/pull/115)
 
 ## Problem
 
