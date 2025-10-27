@@ -1,6 +1,6 @@
 # Vue 2 Deep Selectors issue with LightningCSS
 
-This project demonstrates the issue and solution for LightningCSS warnings with Vue 2.7 deep selector syntax (`::v-deep`, `>>>`, `/deep/`) when using LightningCSS transformer.
+This project demonstrates the issue and solution for LightningCSS warnings with Vue 2.7 deep selector syntax (:deep(), `::v-deep`, `>>>`, `/deep/`) when using LightningCSS transformer.
 
 ## Problem
 
@@ -10,7 +10,7 @@ When using Vue 2.7 with LightningCSS (via `vite.config.ts`), the following warni
 [lightningcss] ** is not recognized as a valid pseudo-class selector
 ```
 
-This occurs because LightningCSS doesn't recognize `::v-deep` as a valid pseudo-class, even though it's a valid Vue.js scoped CSS feature.
+This occurs because LightningCSS doesn't recognize the pseudo as a valid pseudo-class, even though it's a valid Vue.js scoped CSS feature.
 
 ## Solution
 
@@ -22,7 +22,7 @@ This project uses `pnpm patch` to apply the fix. The patch is located in `patche
 
 ### References
 
-- [vite-plugin-vue Issue #507](https://github.com/vitejs/vite-plugin-vue/issues/507#issuecomment-2608467665)
+- [vite-plugin-vue Issue #507](https://github.com/vitejs/vite-plugin-vue/issues/507)
 - [vite-plugin-vue Pull Request #521](https://github.com/vitejs/vite-plugin-vue/pull/521)
 - [Vue Deep Selectors Documentation](https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors)
 - [stackoverflow](https://stackoverflow.com/questions/48032006/how-do-i-use-deep-or-or-v-deep-in-vue-js)
@@ -35,7 +35,7 @@ This project uses `pnpm patch` to apply the fix. The patch is located in `patche
 
 ## Usage
 
-* not applied the patch
+* not applied the patch (Reproduce the issue)
 * remove the `pnpm.patchedDependencies` in package.json
 
 ```bash
@@ -48,6 +48,8 @@ pnpm dev
 # Build for production
 pnpm build
 ```
+
+---
 
 * patch the plugin-vue2
 * revert the `pnpm.patchedDependencies` in package.json

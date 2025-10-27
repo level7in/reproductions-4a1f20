@@ -1,18 +1,41 @@
 <template>
   <div class="page">
     <div>
-      <h2>Vue 2.7 Deep-selectors (Colorful is working with LightningCSS) Demo</h2>
-      <p><strong>Issue:</strong> LightningCSS warns about is not recognized as a valid pseudo-class.</p>
-      <p><strong>Solution:</strong> Apply the same warning suppression from vite-plugin-vue to vite-plugin-vue2.</p>
-      <p style="padding-left: 20px;">vite-plugin-vue: 📝 <a href="https://github.com/vitejs/vite-plugin-vue/issues/507#issuecomment-2608467665" target="_blank">Issue Discussion</a> • <a href="https://github.com/vitejs/vite-plugin-vue/pull/521" target="_blank">Proposed Fix</a></p>
+      <h2>
+        Vue 2.7 Deep-selectors (Colorful is working with LightningCSS) Demo
+      </h2>
+      <p>
+        <strong>Issue:</strong> LightningCSS warns about
+        <code>is not recognized as a valid pseudo-class</code>
+      </p>
+      <p>
+        <strong>Solution:</strong> Apply the same warning suppression from
+        <code>vite-plugin-vue</code> to <code>vite-plugin-vue2</code>.
+      </p>
+      <p style="padding-left: 20px">
+        vite-plugin-vue: 📝
+        <a
+          href="https://github.com/vitejs/vite-plugin-vue/issues/507"
+          target="_blank"
+          >Issue Discussion</a
+        >
+        •
+        <a
+          href="https://github.com/vitejs/vite-plugin-vue/pull/521"
+          target="_blank"
+          >Proposed Fix</a
+        >
+      </p>
       <div>
         <strong>Result:</strong>
         <ul>
           <li>
-            <code>:deep()</code> and <code>::v-deep</code> work without warnings.
+            <code>:deep()</code> and <code>::v-deep</code> work without
+            warnings.
           </li>
           <li>
-            Legacy <code>>>></code> and <code>/deep/</code> are not working, but can be replaced with <code>:deep()</code>.
+            Legacy <code>>>></code> and <code>/deep/</code> are not working, but
+            can be replaced with <code>:deep()</code>.
           </li>
         </ul>
       </div>
@@ -46,13 +69,6 @@
     line-height: 1.6;
     font-size: 0.9em;
 
-    code {
-      background: #f4f4f4;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.85em;
-    }
-
     a {
       color: #0066cc;
       text-decoration: none;
@@ -61,6 +77,13 @@
         text-decoration: underline;
       }
     }
+  }
+
+  code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
   }
   .square {
     display: flex;
