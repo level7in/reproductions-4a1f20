@@ -1,0 +1,38 @@
+diff --git a/dist/index.cjs b/dist/index.cjs
+index 014f4e2e3117c7843857d71641e60478d4395a45..857626f47a0097c4e48eb622ac7a02f480c3d656 100644
+--- a/dist/index.cjs
++++ b/dist/index.cjs
+@@ -1053,6 +1053,14 @@ function vuePlugin(rawOptions = {}) {
+           replacement: "vue/dist/vue.runtime.esm.js"
+         });
+       }
++      const _warn = config.logger.warn;
++      config.logger.warn = (...args) => {
++        const msg = args[0];
++        if (msg.match(/\[lightningcss\] '(v-deep|deep)' is not recognized as a valid pseudo-/)) {
++          return;
++        }
++        _warn(...args);
++      };
+     },
+     configureServer(server) {
+       options.devServer = server;
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 984a2f0063eb0a1af50dda3102c416ecbee4efac..79e3915beb265042e8c6f669923abc6854f441e1 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1044,6 +1044,14 @@ function vuePlugin(rawOptions = {}) {
+           replacement: "vue/dist/vue.runtime.esm.js"
+         });
+       }
++      const _warn = config.logger.warn;
++      config.logger.warn = (...args) => {
++        const msg = args[0];
++        if (msg.match(/\[lightningcss\] '(v-deep|deep)' is not recognized as a valid pseudo-/)) {
++          return;
++        }
++        _warn(...args);
++      };
+     },
+     configureServer(server) {
+       options.devServer = server;
