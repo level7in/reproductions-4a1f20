@@ -33,8 +33,8 @@ This project uses `pnpm patch` to apply the fix. The patch is located in `patche
 
 - ✅ `:deep()` - Vue 3 & Vue 2.7 (Works without warnings with the patch)
 - ✅ `::v-deep` - Vue 2.7 Sass syntax (Works without warnings with the patch)
-- ❌ `>>>` - Legacy Vue 2 syntax (Broken with LightningCSS)
-- ❌ `/deep/` - Deprecated syntax (Broken with LightningCSS)
+- ❌ `>>>` - Legacy Vue 2 syntax (Broken with LightningCSS, but can be replaced with `:deep()`)
+- ❌ `/deep/` - Deprecated syntax (Broken with LightningCSS, but can be replaced with `:deep()`)
 
 ## Usage
 
